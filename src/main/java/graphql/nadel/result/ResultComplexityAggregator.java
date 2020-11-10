@@ -12,6 +12,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Internal
 public class ResultComplexityAggregator {
     private AtomicInteger totalNodeCount = new AtomicInteger(0);
+    private AtomicInteger renameCount = new AtomicInteger(0);
+    private AtomicInteger hydrationCallCount = new AtomicInteger(0);
     private Map<String, Integer> serviceNodeCounts = Collections.synchronizedMap(new LinkedHashMap<>());
 
     public int getTotalNodeCount() {
